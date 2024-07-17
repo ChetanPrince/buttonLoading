@@ -13,7 +13,6 @@ body {
     border: 1px solid blue;
     padding: 2% 10%; 
     margin: 10%;
-    /* max-width: 100%;  */
     width: 35rem;
     height: auto;   /* adjust height to fit content */
     display: flex;
@@ -43,10 +42,7 @@ body {
     height: 2rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-
 }
-
-
 button {
     display: inline-block; 
     min-width: 8rem;
@@ -63,7 +59,6 @@ button {
     cursor: pointer;
     position: relative;
 }
-
 button:hover{
     background-color: rgba(0, 243, 0, 0.319);
     border-color: rgba(0, 100, 0, 0.959);
@@ -73,7 +68,6 @@ button:active{
     box-shadow: none;
     border: none;
 }
-
 /* Ensure responsive links */
 @media (max-width: 600px) {
     .container{
@@ -112,15 +106,27 @@ button:active{
         display: inline-block;
         width: 20px;
         height: 20px;
-        border: 1px solid blue;
+        border: 2px solid rgba(149, 255, 0, 0.915);
         border-radius: 50%;
         border-top: 1px solid black;
         position: absolute;
-    top: 50%; /* adjust position to be inside input*/
-    right: 10px; /* align to the right side inside the input*/
-    transform: translateY(-50%);
-    animation: spin 1s linear forwards;
+        top: 20%; 
+        right: 10px; 
+        opacity: 0;
+    
+    }
+    .spin-animation{
+        animation: spin 1s linear forwards;
+        opacity:1;
     }
     .btn-text{
         margin-right: 20px;
+    }
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
