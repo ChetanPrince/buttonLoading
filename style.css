@@ -5,52 +5,65 @@
     box-sizing: border-box;
 }
 
-/* Body styling */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
 }
 
-/* Container styling */
 .container {
     border: 1px solid blue;
-    padding: 2% 10%; /* Combined shorthand padding */
+    padding: 2% 10%; 
     margin: 10%;
-    max-width: 100%; /* Make the container responsive */
+    /* max-width: 100%;  */
     width: 35rem;
-    height: 15rem;   
+    height: auto;   /* adjust height to fit content */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;  /* center text inside container */
 }
 
-/* User box styling */
+.container h2{
+    margin-bottom: 20px;;
+}
 .user-box {
     margin: 20px;
     position: relative;
 }
 
-/* Link styling */
+.user-box label{
+    display: block;
+    margin-bottom: 5px;
+}
+.user-box input{
+    /* width: 100%;  */
+    padding-right: 40px; /*add space for the icon*/
+    margin-bottom: 20px;
+    padding-left: 10px;
+    height: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+
 button {
-    display: inline-block; /* Ensure padding affects size */
-    width: 8rem;
+    display: inline-block; 
+    min-width: 8rem;
+    width: auto; /* allow width to adjust as needed*/
     height: 2rem;
     background-color: aquamarine;
     border: 1px solid black;
-    /* padding: 5px; */
     margin-top: 20px;
-    margin-left: 10%;
-    text-decoration: none;
     font-weight: 600;
     text-align: center;
     line-height: 2rem; 
-    transition: background-color 0.3s, border-color 0.3s; /* Smooth hover transitions */
     border-radius: 5px;
     box-shadow: 2px 2px 10px grey;
     cursor: pointer;
+    position: relative;
 }
 
-/* Link hover effect */
 button:hover{
     background-color: rgba(0, 243, 0, 0.319);
     border-color: rgba(0, 100, 0, 0.959);
@@ -63,27 +76,51 @@ button:active{
 
 /* Ensure responsive links */
 @media (max-width: 600px) {
+    .container{
+        margin:5%;
+        padding: 5%;
+    }
     button {
         width: 100%;
         margin-left: 0;
     }
+    .user-box input{
+        width: 100%; /* adjust for full width*/
+    }
 }
 .password-toggle-icon {
     position: absolute;
-    top: 10%;
-    right: 30%;
-    /* transform: translateY(-70%); */
+    top: 50%; /* adjust position to be inside input*/
+    right: 10px; /* align to the right side inside the input*/
+    transform: translateY(-50%);
     cursor: pointer;
   }
   
   .password-toggle-icon i {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1;
     color: #333;
     transition: color 0.3s ease-in-out;
-    margin-bottom: 20px;
+    opacity: 0.5;    
   }
   
   .password-toggle-icon i:hover {
-    color: #000;
-  }
+      opacity: 1;
+      color: #ff0000;
+    }
+    #spin{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid blue;
+        border-radius: 50%;
+        border-top: 1px solid black;
+        position: absolute;
+    top: 50%; /* adjust position to be inside input*/
+    right: 10px; /* align to the right side inside the input*/
+    transform: translateY(-50%);
+    animation: spin 1s linear forwards;
+    }
+    .btn-text{
+        margin-right: 20px;
+    }
