@@ -43,6 +43,12 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+/* message to be appeared on a wrong input */
+.message {
+    color: red;
+    display: none;
+    margin-left: 10px;
+}
 button {
     display: inline-block; 
     min-width: 8rem;

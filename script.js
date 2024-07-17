@@ -9,7 +9,34 @@ passwordView.addEventListener("click", ()=>{
         }
 })
 
+const submit = document.getElementById("submit-wait");
+submit.addEventListener("click", ()=>{
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const messageElement = document.querySelector(".message");
+    if(!isValidEmail(username)){
+        messageElement.innerText = "Invalid email address";
+        messageElement.style.display = 'inline';
+    }else{
+        messageElement.innerText = "Valid email address";
+                messageElement.style.display = 'inline';
+                messageElement.style.color = 'green'; // Change color for valid email
+            }
+            // Hide the message after 3 seconds
+            setTimeout(() => {
+                messageElement.style.display = 'none';
+            }, 3000);
+})
 
+
+
+function isValidEmail(email) {
+    // Define the regular expression for a valid email address
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Test the email against the regex
+    return emailRegex.test(email);
+}
 
 
 // everything inside a click event and after checking whether username has an eligible email id 
