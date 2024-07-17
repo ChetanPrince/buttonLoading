@@ -35,13 +35,13 @@ body {
     margin-bottom: 5px;
 }
 .user-box input{
-    /* width: 100%;  */
-    padding-right: 40px; /*add space for the icon*/
-    margin-bottom: 20px;
-    padding-left: 10px;
-    height: 2rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: calc(100% - 30px); /* Adjust width to fit the icon inside */
+            padding-right: 40px; /* Add space for the icon */
+            margin-bottom: 20px;
+            padding-left: 10px;
+            height: 2rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
 }
 /* message to be appeared on a wrong input */
 .message {
@@ -85,13 +85,13 @@ button:active{
         margin-left: 0;
     }
     .user-box input{
-        width: 100%; /* adjust for full width*/
+        width: calc(100% - 30px); /* Adjust width for full width */
     }
 }
 .password-toggle-icon {
     position: absolute;
     top: 50%; /* adjust position to be inside input*/
-    right: 10px; /* align to the right side inside the input*/
+    right: 20px; /* align to the right side inside the input*/
     transform: translateY(-50%);
     cursor: pointer;
   }
@@ -109,7 +109,7 @@ button:active{
       color: #ff0000;
     }
     #spin{
-        display: inline-block;
+        /* display: inline-block; */
         width: 20px;
         height: 20px;
         border: 2px solid rgba(149, 255, 0, 0.915);
@@ -117,16 +117,12 @@ button:active{
         border-top: 1px solid black;
         position: absolute;
         top: 20%; 
-        right: 10px; 
-        opacity: 0;
-    
+        /* right: 10px;  */
+        display: none;
     }
     .spin-animation{
-        animation: spin 1s linear forwards;
-        opacity:1;
-    }
-    .btn-text{
-        margin-right: 20px;
+        animation: spin 3s linear forwards;
+         
     }
     @keyframes spin {
         from {

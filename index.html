@@ -15,16 +15,18 @@
             <div class="user-box">
                 <label for="username">Username</label>
               <input id="username" type="text" name="" required="" />
-              <span class="message"></span>
+              <span id="email-message" class="message"></span>
             </div>
             <div class="user-box">
                 <label for="password">Password</label>
-              <input type="password" name="" id="password" required="" />
-              <span class="password-toggle-icon"><i class="fa fa-eye toggle-icon"></i></span>
+                <input type="password" name="" id="password" required="" />
+                <span class="password-toggle-icon"><i class="fa fa-eye toggle-icon"></i></span>
             </div>
+            <span id="password-message" class="message"></span>
         
               <button id="submit-wait" type="button">
-                <span>Submit</span>
+                <span class="btn-text">Submit</span>
+                <span id="spin"></span>
 
               </button>
           
