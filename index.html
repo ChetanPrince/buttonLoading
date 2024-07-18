@@ -3,37 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Loading</title>
+    <title>Form Submission Processing Wait</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/380ef9e0ba.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="login-box">
-          <h2>Login</h2>
-          <form action="" method="post">
-            <div class="user-box">
-                <label for="username">Username</label>
-              <input id="username" type="text" name="" required="" />
-              <span id="email-message" class="message"></span>
+    <h1>Submission Processing Wait Tester</h1>
+    <div id="container">
+        <div id="form">
+            <h2>Please Fill In Following Details To Proceed</h2>
+            <div class="input-group">
+                <input id="userName" type="email" required placeholder="username@abc.com"/>
+                <label for="userName">Username</label>
+                <br>
+                <span id="invalid-email" class="message"></span>
             </div>
-            <div class="user-box">
+            <br>
+            <div class="input-group">
+                <input id="password" type="password" required placeholder="Password123!"/>
+                <span id="password-view" class="password-toggle-icon"><i class="fa fa-eye toggle-icon"></i></span>
                 <label for="password">Password</label>
-                <input type="password" name="" id="password" required="" />
-                <span class="password-toggle-icon"><i class="fa fa-eye toggle-icon"></i></span>
+                <br>
+                <span id="invalid-password" class="message"></span>
             </div>
-            <span id="password-message" class="message"></span>
-        
-              <button id="submit-wait" type="button">
-                <span class="btn-text">Submit</span>
-                <span id="spin"></span>
-
-              </button>
-          
-          </form>
         </div>
-      </div>
-      <script src="script.js"></script>
-    
+        <div id="submit-form">
+            <button id="submit" type="button">
+                <span id="submit-btn" class="btn-text">Submit</span>
+                <span id="animation-element" class="btn-animation hide"></span>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
