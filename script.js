@@ -41,7 +41,7 @@ if(!isValidPassword(password)){
     document.getElementById("animation-element").classList.add("hide");
     document.getElementById("animation-element").classList.remove("animation");
     submit.disabled = false;
-},3000)
+},5000)
 }
 
 
